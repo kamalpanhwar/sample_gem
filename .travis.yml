@@ -1,0 +1,17 @@
+language: ruby
+
+rvm:
+  - 2.5.8
+  - 2.6.6
+  - 2.7.1
+
+install: bundle install --retry=3
+
+before_install:
+  - gum update bundler
+
+env:
+  - 'TEST_RAILS_VERSION="~> 7.0.3"'
+  - 'TEST_RAILS_VERSION="~> 5.2.3"'
+  - 'TEST_RAILS_VERSION="~> 6.0.3"'
+

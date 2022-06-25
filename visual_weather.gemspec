@@ -24,7 +24,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rubocop-performance', '~> 1.14.2'
   s.add_development_dependency  'codecov', '~> 0.6.0'
   s.add_development_dependency  'dotenv', '~> 2.7'
-  s.add_development_dependency  'rails', '~> 7.0'
   s.add_development_dependency  'rake', '~> 13.0'
   s.add_development_dependency  'rspec', '~> 3.11'
   s.add_development_dependency  'rspec-rails', '~> 5.1'
@@ -33,6 +32,11 @@ Gem::Specification.new do |s|
   s.metadata = {
     'rubygems_mfa_required' => 'true'
   }
+  if ENV['TEST_RAILS_VERSION'].nil?
+    s.add_development_dependency 'rails', '~> 7.0.3'
+  else
+    s.add_development_dependency 'rails', ENV['TEST_RAILS_VERSION'].to_s
+  end
 end
 
 
