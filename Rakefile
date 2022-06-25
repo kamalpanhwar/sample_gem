@@ -1,6 +1,19 @@
 # frozen_string_literal: true
 
 require 'rake'
+
+begin
+  require 'bundler/setup'
+  Bundler::GemHelper.install_tasks
+rescue LoadError
+  puts 'although not required, bundler is reocmmended for runnign the tests'
+end
+
+task default: :spec
+
+require 'rspec/core/rake_task'
+RSpec::Core::RakeTask.new(:spec)
+
 require 'rubocop/rake_task'
 
 RuboCop::RakeTask.new do |task|

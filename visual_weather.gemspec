@@ -22,8 +22,18 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'ruby-lokalise-api'
   s.add_development_dependency 'rubocop', '~> 1.30.1'
   s.add_development_dependency 'rubocop-performance', '~> 1.14.2'
-  s.add_development_dependency 'rubocop-rspec', '~> 2.11.1'
+  s.add_development_dependency  'codecov', '~> 0.6.0'
+  s.add_development_dependency  'dotenv', '~> 2.7'
+  s.add_development_dependency  'rails', '~> 7.0'
+  s.add_development_dependency  'rake', '~> 13.0'
+  s.add_development_dependency  'rspec', '~> 3.11'
+  s.add_development_dependency  'rspec-rails', '~> 5.1'
+  s.add_development_dependency  'simplecov', '~> 0.21.2'
+  s.add_development_dependency  'vcr', '~> 6.1'
   s.metadata = {
     'rubygems_mfa_required' => 'true'
   }
 end
+
+
+
